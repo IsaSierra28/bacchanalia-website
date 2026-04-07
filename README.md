@@ -3,11 +3,11 @@
 
 ## About the Project
 
-Bacchanalia is the website for a future restaurant and pub named after the ancient Roman festival — a celebration of wine, theater, and joy in honor of Bacchus, the god of wine. This site serves as the main online presence of the restaurant, giving visitors a sense of the concept, the atmosphere, and the experience they can expect.
+Bacchanalia is the website for a future restaurant and pub named after the ancient Roman festival. A celebration of wine, theater, and joy in honor of Bacchus, the god of wine. This site serves as the main online presence of the restaurant, giving visitors a sense of the concept, the atmosphere, and the experience they can expect.
 
 ## Motivation
 
-This project is personal. It is built around the dream of someone very close to me — a chef who studied at the Stratford Culinary School in Ontario and has spent years working in professional kitchens. He now wants to open his own restaurant, a space that truly reflects his passion for food and for culture, especially the Roman world. The name Bacchanalia captures exactly the vibe he envisions: festive, a little theatrical, elegant but welcoming.
+This project is personal. It is built around the dream of someone very close to me. A chef who studied at the Stratford Culinary School in Ontario and has spent years working in professional kitchens. He now wants to open his own restaurant, a space that truly reflects his passion for food and for culture, especially the Roman world. The name Bacchanalia captures exactly the vibe he envisions: festive, a little theatrical, elegant but welcoming.
 
 My goal is to help him bring that vision to life online, while putting into practice everything I have been learning in my Frontend Development course.
 
