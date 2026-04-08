@@ -5,398 +5,433 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bacchanalia Restaurant & Pub</title>
 
-    <!--Bootstrap CSS-->
+    <!-- Bootstrap CSS loaded from CDN — gives us all the components and utilities -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Our own custom CSS file — overrides and extends Bootstrap styles -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#hero">Bacchanalia</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#gallery">Gallery</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- HERO -->
-    <section id="hero" class="py-5 text-center text-white bg-dark">
-      <div class="container py-5">
-        <h1 class="display-3 fw-bold">Bacchanalia</h1>
-        <p class="lead">A celebration of Roman spirit</p>
-        <a href="#menu" class="btn btn-outline-light btn-lg mt-3"
-          >Explore Our Menu</a
-        >
-      </div>
-    </section>
-    <!-- ABOUT -->
-    <section id="about" class="py-5">
-      <div class="container">
-        <h2 class="text-left mb-4">About Bacchanalia</h2>
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <img
-              src="https://placehold.co/600x400?text=Chef+Photo"
-              class="img-fluid"
-              alt="Chef photo"
-            />
-          </div>
-          <div class="col-md-6">
-            <h3>Where Passion Meets Tradition</h3>
-            <p>
-              Trained at the Stratford Culinary School in Ontario, our chef
-              embarked on a journey that went far beyond the art of cooking.It
-              was a pursuit of culture, memory, and the deep human need to
-              gather around a table.
-            </p>
-            <p>
-              After years of dedication in professional kitchens, he now brings
-              that vision to life through Bacchanalia. A space named after the
-              ancient Roman festival in honor of Bacchus, god of wine and
-              revelry. Here, every dish tells a story, every glass carries a
-              tradition, and every guest is welcomed as part of something
-              greater than a meal.
-            </p>
-            <a href="#contact" class="btn btn-outline-secondary mt-2"
-              >See more</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- MENU -->
-    <section id="menu" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-left mb-4">Our Menu</h2>
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img
-                src="https://placehold.co/400x250?text=Dish+1"
-                class="card-img-top"
-                alt="Dish placeholder"
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Starter
-                  <span class="badge bg-danger ms-2">Popular</span>
-                </h5>
-                <p class="card-text">Info about the starter..</p>
-                <a href="#contact" class="btn btn-outline-secondary btn-sm"
-                  >See more</a
-                >
-              </div>
-            </div>
-          </div>
+    <!-- HEADER — semantic element that wraps the top navigation area -->
+    <header>
+      <!-- Bootstrap NAVBAR component
+           navbar-expand-lg: collapses into a hamburger menu on small screens
+           navbar-dark: tells Bootstrap we have a dark background (white icons) -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
 
-          <!-- Card 2 -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img
-                src="https://placehold.co/400x250?text=Dish+2"
-                class="card-img-top"
-                alt="Dish placeholder"
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Main Dish
-                  <span class="badge bg-success ms-2">New</span>
-                </h5>
-                <p class="card-text">Info about the main dish.</p>
-                <a href="#contact" class="btn btn-outline-secondary btn-sm"
-                  >See more</a
-                >
-              </div>
-            </div>
-          </div>
+          <!-- Brand / logo link — scrolls back to hero when clicked -->
+          <a class="navbar-brand" href="#hero">Bacchanalia</a>
 
-          <!-- Card 3 -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img
-                src="https://placehold.co/400x250?text=Dish+3"
-                class="card-img-top"
-                alt="Dish placeholder"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dessert</h5>
-                <p class="card-text">Info about the dessert.</p>
-                <a href="#contact" class="btn btn-outline-secondary btn-sm"
-                  >See more</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- GALLERY -->
-    <section id="gallery" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Gallery</h2>
-
-        <!-- CAROUSEL — componente adicional #2 -->
-        <div
-          id="galleryCarousel"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#galleryCarousel"
-              data-bs-slide-to="0"
-              class="active"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#galleryCarousel"
-              data-bs-slide-to="1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#galleryCarousel"
-              data-bs-slide-to="2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#galleryCarousel"
-              data-bs-slide-to="3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#galleryCarousel"
-              data-bs-slide-to="4"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#galleryCarousel"
-              data-bs-slide-to="5"
-            ></button>
-          </div>
-
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="https://placehold.co/1200x500?text=Gallery+Photo+1"
-                class="d-block w-100"
-                alt="Gallery 1"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="https://placehold.co/1200x500?text=Gallery+Photo+2"
-                class="d-block w-100"
-                alt="Gallery 2"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="https://placehold.co/1200x500?text=Gallery+Photo+3"
-                class="d-block w-100"
-                alt="Gallery 3"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="https://placehold.co/1200x500?text=Gallery+Photo+4"
-                class="d-block w-100"
-                alt="Gallery 4"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="https://placehold.co/1200x500?text=Gallery+Photo+5"
-                class="d-block w-100"
-                alt="Gallery 5"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="https://placehold.co/1200x500?text=Gallery+Photo+6"
-                class="d-block w-100"
-                alt="Gallery 6"
-              />
-            </div>
-          </div>
-
+          <!-- Hamburger button — only visible on small screens.
+               data-bs-toggle and data-bs-target tell Bootstrap which element to show/hide -->
           <button
-            class="carousel-control-prev"
+            class="navbar-toggler"
             type="button"
-            data-bs-target="#galleryCarousel"
-            data-bs-slide="prev"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            <span class="carousel-control-prev-icon"></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#galleryCarousel"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon"></span>
-          </button>
+
+          <!-- Navigation links — collapse on mobile, expand on desktop
+               ms-auto pushes the list to the right side -->
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+              <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
         </div>
-      </div>
-    </section>
-    <!-- TEAM -->
-    <section id="team" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-4">Our Team</h2>
-        <div class="row g-4 justify-content-center">
-          <!-- Member 1 -->
-          <div class="col-md-4 text-center">
-            <img
-              src="https://placehold.co/150x150?text=Chef"
-              class="rounded-circle mb-3"
-              alt="Head Chef"
-            />
-            <h5>Head Chef</h5>
-            <p class="text-muted">Executive Chef & Founder</p>
-          </div>
+      </nav>
+    </header>
 
-          <!-- Member 2 -->
-          <div class="col-md-4 text-center">
-            <img
-              src="https://placehold.co/150x150?text=Sous+Chef"
-              class="rounded-circle mb-3"
-              alt="Sous Chef"
-            />
-            <h5>Sous Chef</h5>
-            <p class="text-muted">Kitchen & Flavour Specialist</p>
-          </div>
+    <!-- MAIN — semantic element that wraps all the main page content -->
+    <main>
 
-          <!-- Member 3 -->
-          <div class="col-md-4 text-center">
-            <img
-              src="https://placehold.co/150x150?text=Manager"
-              class="rounded-circle mb-3"
-              alt="Manager"
-            />
-            <h5>Front of House Manager</h5>
-            <p class="text-muted">Guest Experience & Reservations</p>
-          </div>
+      <!-- HERO SECTION
+           Background image + overlay are set in CSS.
+           The #typewriter paragraph starts empty — JavaScript fills it with the
+           typewriter animation. -->
+      <section id="hero" class="py-5 text-center text-white">
+        <div class="container py-5">
+          <h1 class="display-3 fw-bold">Bacchanalia</h1>
+          <p class="lead" id="typewriter"></p>
+          <!-- Bootstrap utility classes: btn-lg makes it larger, mt-3 adds top margin -->
+          <a href="#menu" class="btn btn-outline-light btn-lg mt-3">Explore Our Menu</a>
         </div>
-      </div>
-    </section>
-    <!-- CONTACT -->
-    <section id="contact" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Find Us</h2>
-        <div class="row g-4">
-          <!-- Info -->
-          <div class="col-md-6">
-            <h5>Location & Hours</h5>
-            <p>123 Rue de la Barre, Montreal, QC</p>
-            <p>Mon–Fri: 9:00 AM – 11:00 PM</p>
-            <p>Sat–Sun: 8:00 AM – 11:00 PM</p>
-            <p>info@bacchanalia.ca</p>
-            <p>(236) 412 8459</p>
-          </div>
+      </section>
 
-          <!-- Reservation Form -->
-          <div class="col-md-6">
-            <h5>Reserve a Table</h5>
-            <form>
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Name"
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Your Email"
-                />
-              </div>
-              <div class="mb-3">
-                <input type="date" class="form-control" />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="number"
-                  class="form-control"
-                  placeholder="Number of Guests"
-                />
-              </div>
+      <!-- ABOUT SECTION
+           Two-column Bootstrap grid: image on the left, text on the right.
+           col-md-6 means each column takes half the width on medium+ screens,
+           and stacks vertically on small screens. -->
+      <section id="about" class="py-5">
+        <div class="container">
+          <h2 class="text-left mb-4">About Bacchanalia</h2>
+          <div class="row align-items-center">
 
-              <!-- TOAST —aditional component #3 -->
+            <div class="col-md-6">
+              <img
+                src="images/chef.jpg"
+                class="img-fluid"
+                alt="Chef Clement Filewod"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <h3>Where Passion Meets Tradition</h3>
+              <p>
+                Clement Filewod trained at the Stratford Culinary School in
+                Ontario and went on to work in professional kitchens where he
+                developed a straightforward approach to cooking: good
+                ingredients, honest technique, and dishes that make sense on the
+                plate. Bacchanalia is his first restaurant and the place where
+                that vision finally has a home.
+              </p>
+
+              <!-- Bootstrap COLLAPSE component — "See more" button
+                   data-bs-toggle="collapse" activates Bootstrap's collapse feature
+                   data-bs-target points to the ID of the content to show/hide
+                   JavaScript changes the button text between "See more" and "See less" -->
               <button
+                class="btn btn-outline-secondary mt-2"
                 type="button"
-                class="btn btn-outline-secondary"
-                id="toastBtn"
-              >
-                Send Reservation
-              </button>
-            </form>
+                data-bs-toggle="collapse"
+                data-bs-target="#aboutCollapse"
+                aria-expanded="false"
+                aria-controls="aboutCollapse"
+                id="aboutToggleBtn"
+              >See more</button>
 
-            <!-- Toast message -->
-            <div class="toast-container position-fixed bottom-0 end-0 p-3">
-              <div id="reservationToast" class="toast" role="alert">
-                <div class="toast-header">
-                  <strong class="me-auto">Bacchanalia</strong>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="toast"
-                  ></button>
-                </div>
-                <div class="toast-body">
-                  Thank you! Your reservation request has been received.
+              <div class="collapse mt-3" id="aboutCollapse">
+                <div class="border-start border-secondary ps-3">
+                  <p>
+                    The name comes from the ancient Roman festival dedicated to
+                    Bacchus, god of wine and celebration. It captures the kind
+                    of experience Clement wanted to create: somewhere that feels
+                    festive without being stiff, where the food is the focus and
+                    guests feel welcome to stay.
+                  </p>
+                  <p>
+                    The menu draws from classical technique and seasonal
+                    ingredients, with dishes that are thoughtful without being
+                    overcomplicated. Every item on the plate has a purpose.
+                  </p>
+                  <p>
+                    Bacchanalia is rooted in the idea that a great meal is more
+                    than the food itself. It is the setting, the people around
+                    the table, and the feeling that something memorable happened
+                    that night.
+                  </p>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
-      </div>
-    </section>
-    <!-- FOOTER -->
-    <footer class="py-4 bg-dark text-white text-center">
+      </section>
+
+      <!-- MENU SECTION
+           Three Bootstrap CARD components in a responsive grid.
+           g-4 adds gutters (gap) between the cards.
+           h-100 makes all cards the same height.
+           Each card has a collapse "See more" button showing dish details. -->
+      <section id="menu" class="py-5">
+        <div class="container">
+          <h2 class="text-left mb-4">Our Menu</h2>
+          <div class="row g-4">
+
+            <!-- Card 1 — Gnocchi -->
+            <div class="col-md-4">
+              <div class="card h-100">
+                <img src="images/new-dish.jpg" class="card-img-top" alt="Gnocchi with burrata" />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Gnocchi
+                    <!-- Bootstrap BADGE component — highlights popular items -->
+                    <span class="badge bg-danger ms-2">Popular</span>
+                  </h5>
+                  <p class="card-text">Gnocchi with baby spinach, foie demi and mascarpone.</p>
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#starterCollapse"
+                    aria-expanded="false"
+                    aria-controls="starterCollapse"
+                  >See more</button>
+                  <div class="collapse mt-2" id="starterCollapse">
+                    <div class="border-start border-secondary ps-2 mt-1">
+                      <p class="mb-1 small"><strong>Ingredients:</strong> Gnocchi, baby spinach, foie demi-glace, mascarpone.</p>
+                      <p class="mb-1 small"><strong>Allergens:</strong> Contains dairy, gluten, poultry.</p>
+                      <p class="mb-0 small"><strong>Price:</strong> $24</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 — Pork Chop -->
+            <div class="col-md-4">
+              <div class="card h-100">
+                <img src="images/main-dish.jpg" class="card-img-top" alt="Pork chop with hazelnut cream" />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Pork Chop
+                    <span class="badge bg-success ms-2">New</span>
+                  </h5>
+                  <p class="card-text">Pork chop with hazelnut cream sauce, caramelized fennel puree and confit king oyster mushrooms.</p>
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainDishCollapse"
+                    aria-expanded="false"
+                    aria-controls="mainDishCollapse"
+                  >See more</button>
+                  <div class="collapse mt-2" id="mainDishCollapse">
+                    <div class="border-start border-secondary ps-2 mt-1">
+                      <p class="mb-1 small"><strong>Ingredients:</strong> Pork chop, hazelnut cream sauce, caramelized fennel puree, confit king oyster mushrooms.</p>
+                      <p class="mb-1 small"><strong>Allergens:</strong> Contains nuts, dairy.</p>
+                      <p class="mb-0 small"><strong>Price:</strong> $36</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 — Pear Galette -->
+            <div class="col-md-4">
+              <div class="card h-100">
+                <img src="images/dessert.jpg" class="card-img-top" alt="Pear galette with elderflower" />
+                <div class="card-body">
+                  <h5 class="card-title">Pear Galette</h5>
+                  <p class="card-text">Pear poached in elderflower liquor and honey syrup, with apple and pear compote in a galette.</p>
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#dessertCollapse"
+                    aria-expanded="false"
+                    aria-controls="dessertCollapse"
+                  >See more</button>
+                  <div class="collapse mt-2" id="dessertCollapse">
+                    <div class="border-start border-secondary ps-2 mt-1">
+                      <p class="mb-1 small"><strong>Ingredients:</strong> Pear poached in elderflower liquor and honey syrup, apple and pear compote, galette pastry.</p>
+                      <p class="mb-1 small"><strong>Allergens:</strong> Contains gluten, eggs, dairy.</p>
+                      <p class="mb-0 small"><strong>Price:</strong> $14</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY SECTION
+           Bootstrap CAROUSEL component — slides automatically and has arrow controls.
+           data-bs-ride="carousel" starts the auto-play.
+           carousel-indicators are the clickable dots at the bottom. -->
+      <section id="gallery" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Gallery</h2>
+
+          <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Dot indicators — one button per slide -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+
+            <!-- Slides — the first one must have class "active" -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="gallery-images/1.jpg" class="d-block w-100" alt="Restaurant interior" />
+              </div>
+              <div class="carousel-item">
+                <img src="gallery-images/2.jpg" class="d-block w-100" alt="Dish presentation" />
+              </div>
+              <div class="carousel-item">
+                <img src="gallery-images/3.jpg" class="d-block w-100" alt="Kitchen at work" />
+              </div>
+              <div class="carousel-item">
+                <img src="gallery-images/4.jpg" class="d-block w-100" alt="Dining area" />
+              </div>
+              <div class="carousel-item">
+                <img src="gallery-images/5.jpg" class="d-block w-100" alt="Seasonal ingredients" />
+              </div>
+              <div class="carousel-item">
+                <img src="gallery-images/6.jpg" class="d-block w-100" alt="Dessert plating" />
+              </div>
+            </div>
+
+            <!-- Previous / Next arrow buttons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM SECTION
+           Three columns using Bootstrap grid. rounded-circle is a Bootstrap
+           utility class that makes images circular. justify-content-center
+           centers the columns horizontally. -->
+      <section id="team" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Our Team</h2>
+          <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4 text-center">
+              <img src="images/chef-photo.jpg" class="rounded-circle mb-3" alt="Head Chef Clement Filewod" />
+              <h5>Head Chef</h5>
+              <p class="text-muted">Executive Chef & Founder</p>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <img src="images/sou-chef.jpg" class="rounded-circle mb-3" alt="Sous Chef" />
+              <h5>Sous Chef</h5>
+              <p class="text-muted">Kitchen & Flavour Specialist</p>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <img src="images/front-of-house.jpg" class="rounded-circle mb-3" alt="Front of House Manager" />
+              <h5>Front of House Manager</h5>
+              <p class="text-muted">Guest Experience & Reservations</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION
+           Two columns: location info on the left, reservation form on the right.
+           The form uses Bootstrap FORM CONTROLS (form-control class).
+           Each input has an id so JavaScript can read its value and show errors.
+           The error divs below each input are empty by default — JS fills them on validation. -->
+      <section id="contact" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Find Us</h2>
+          <div class="row g-4">
+
+            <!-- Location and hours info -->
+            <div class="col-md-6">
+              <h5>Location & Hours</h5>
+              <p>123 Rue de la Barre, Montreal, QC</p>
+              <p>Mon–Fri: 9:00 AM – 11:00 PM</p>
+              <p>Sat–Sun: 8:00 AM – 11:00 PM</p>
+              <p>info@bacchanalia.ca</p>
+              <p>(236) 412 8459</p>
+            </div>
+
+            <!-- Reservation form with JavaScript validation -->
+            <div class="col-md-6">
+              <h5>Reserve a Table</h5>
+              <form id="reservationForm">
+
+                <div class="mb-3">
+                  <input type="text" id="guestName" class="form-control" placeholder="Your Name" />
+                  <!-- Error message shown by JavaScript if name is empty -->
+                  <div id="nameError" class="form-error"></div>
+                </div>
+
+                <div class="mb-3">
+                  <input type="email" id="guestEmail" class="form-control" placeholder="Your Email" />
+                  <!-- Error message shown if email format is invalid -->
+                  <div id="emailError" class="form-error"></div>
+                </div>
+
+                <div class="mb-3">
+                  <input type="date" id="resDate" class="form-control" />
+                  <!-- Error message shown if no date is selected -->
+                  <div id="dateError" class="form-error"></div>
+                </div>
+
+                <div class="mb-3">
+                  <input type="number" id="guestCount" class="form-control" placeholder="Number of Guests" min="1" />
+                  <!-- Error message shown if guests field is empty or 0 -->
+                  <div id="guestsError" class="form-error"></div>
+                </div>
+
+                <!-- type="button" prevents default form submit — validation runs from JS -->
+                <button type="button" class="btn btn-outline-secondary" id="toastBtn">
+                  Send Reservation
+                </button>
+              </form>
+
+              <!-- Bootstrap TOAST component — confirmation popup shown after valid submission
+                   position-fixed keeps it in the corner of the screen -->
+              <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="reservationToast" class="toast" role="alert">
+                  <div class="toast-header">
+                    <strong class="me-auto">Bacchanalia</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body">
+                    Thank you! Your reservation request has been received.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- BACK TO TOP BUTTON
+         Styled and positioned in CSS. Starts hidden — JavaScript shows it
+         when the user scrolls more than 300px down the page. -->
+    <button id="backToTop" title="Back to top">&#8679;</button>
+
+    <!-- FOOTER — semantic element, styled with our custom CSS -->
+    <footer class="py-5 text-center">
       <div class="container">
-        <p class="mb-1">Bacchanalia Restaurant & Pub</p>
-        <p class="mb-0 text-muted">
-          &copy; 2026 Isabela Sierra Chinchilla. All rights reserved.
-        </p>
+        <p class="fs-4 mb-1">Bacchanalia</p>
+        <p class="footer-sub mb-3">Restaurant & Pub — Montreal, QC</p>
+        <!-- Bootstrap spacing utilities: me-3 adds right margin between items -->
+        <div class="footer-info mb-3">
+          <span class="me-3">info@bacchanalia.ca</span>
+          <span class="me-3">·</span>
+          <span class="me-3">(236) 412 8459</span>
+          <span class="me-3">·</span>
+          <span>123 Rue de la Barre</span>
+        </div>
+        <hr />
+        <p class="footer-copy mb-0">&copy; 2026 Isabela Sierra Chinchilla. All rights reserved.</p>
       </div>
     </footer>
-    <!-- Toast script -->
-    <script>
-      document
-        .getElementById("toastBtn")
-        .addEventListener("click", function () {
-          var toast = new bootstrap.Toast(
-            document.getElementById("reservationToast"),
-          );
-          toast.show();
-        });
-    </script>
+
+    <!-- Bootstrap JS must be loaded before our custom script.js
+         because script.js uses bootstrap.Toast which requires this library -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Our custom JavaScript — all interactivity is in this separate file -->
+    <script src="js/script.js"></script>
+
   </body>
 </html>

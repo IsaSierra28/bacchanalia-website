@@ -1,0 +1,303 @@
+/* ── GLOBAL STYLES ───────────────────────────────────────────────────────────
+   Sets the default background, text color, and font for the whole page.
+   Arial is used for body text (clean, readable).
+   Georgia is used for headings (classic, elegant serif). */
+
+body {
+  background-color: #F5EFE4; /* warm cream background */
+  color: #2c2c2c;
+  font-family: Arial, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+
+/* ── NAVBAR ──────────────────────────────────────────────────────────────────
+   Dark charcoal background with a burgundy bottom border.
+   We use ".navbar-dark .navbar-brand" instead of just ".navbar-brand"
+   because Bootstrap's own styles are more specific — this way ours win. */
+
+.navbar {
+  background-color: #1C1A18; /* dark charcoal */
+  border-bottom: 1px solid #7A1E2E; /* burgundy accent line */
+}
+
+.navbar-dark .navbar-brand {
+  color: #C4873A; /* amber/gold for the restaurant name */
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.navbar-dark .nav-link {
+  color: #F5EFE4; /* cream text */
+  letter-spacing: 1px;
+  border-radius: 20px; /* pill shape on hover */
+  padding: 0.4rem 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease; /* smooth hover animation */
+}
+
+.navbar-dark .nav-link:hover {
+  color: #1C1A18;
+  background-color: #C4873A; /* amber pill on hover */
+}
+
+
+/* ── HERO SECTION ────────────────────────────────────────────────────────────
+   Full-screen background image with a dark overlay (linear-gradient) so the
+   white text is readable on top of the photo.
+   "background-attachment: fixed" creates a parallax scrolling effect.
+   "min-height: 90vh" makes it nearly full screen height. */
+
+#hero {
+  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('../gallery-images/4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* parallax effect */
+  min-height: 90vh;
+  display: flex;
+  align-items: center; /* vertically center the content */
+}
+
+#hero h1 {
+  color: #C4873A;
+  letter-spacing: 4px;
+}
+
+/* The typewriter text below the main title */
+#hero .lead {
+  color: #C4873A;
+  font-size: 1.3rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+#hero .btn-outline-light {
+  border-color: #C4873A;
+  color: #C4873A;
+}
+
+#hero .btn-outline-light:hover {
+  background-color: #C4873A;
+  color: #1C1A18;
+}
+
+
+/* ── SECTION HEADINGS ────────────────────────────────────────────────────────
+   All h2 titles across the page use burgundy to keep a consistent color scheme. */
+
+h2 {
+  color: #7A1E2E; /* burgundy */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h3 {
+  color: #1C1A18;
+}
+
+
+/* ── ABOUT SECTION ───────────────────────────────────────────────────────────
+   The chef photo is forced to a fixed height with object-fit: cover so it
+   fills the space without stretching or distorting. */
+
+#about {
+  background-color: #F5EFE4;
+}
+
+#about img {
+  max-width: 650px;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;       /* crops the image to fill the box */
+  object-position: center top; /* keeps the top of the image visible */
+  border-radius: 8px;
+}
+
+
+/* ── MENU SECTION ────────────────────────────────────────────────────────────
+   Slightly darker cream background to visually separate this section.
+   Cards lift on hover using transform and a stronger box-shadow. */
+
+#menu {
+  background-color: #ede5d8;
+}
+
+#menu .card {
+  border: none;
+  border-bottom: 3px solid #7A1E2E; /* burgundy accent on card bottom */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease; /* smooth hover */
+  background-color: #F5EFE4;
+}
+
+#menu .card:hover {
+  transform: translateY(-10px); /* card floats up on hover */
+  box-shadow: 0 14px 30px rgba(122, 30, 46, 0.2); /* burgundy glow */
+}
+
+
+/* ── BUTTONS ─────────────────────────────────────────────────────────────────
+   We customize Bootstrap's btn-outline-secondary to match our color palette. */
+
+.btn-outline-secondary {
+  border-color: #7A1E2E;
+  color: #7A1E2E;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #7A1E2E;
+  color: #F5EFE4;
+}
+
+
+/* ── TEAM SECTION ────────────────────────────────────────────────────────────
+   Circular profile photos are forced to a fixed size with object-fit: cover
+   so all photos look uniform regardless of original dimensions. */
+
+#team {
+  background-color: #ede5d8;
+}
+
+#team .rounded-circle {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+#team h5 {
+  color: #7A1E2E;
+  font-weight: 600;
+}
+
+#team .text-muted {
+  color: #a09080;
+}
+
+
+/* ── CONTACT SECTION ─────────────────────────────────────────────────────────
+   The focus glow on form inputs is changed from Bootstrap's default blue
+   to match our amber color palette. */
+
+#contact {
+  background-color: #F5EFE4;
+}
+
+#contact h5 {
+  color: #7A1E2E;
+}
+
+#contact .form-control:focus {
+  border-color: #C4873A;
+  box-shadow: 0 0 0 0.2rem rgba(196, 135, 58, 0.2); /* amber glow on focus */
+}
+
+/* Error messages shown below invalid form fields */
+.form-error {
+  color: #dc3545; /* red */
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+
+/* ── FOOTER ──────────────────────────────────────────────────────────────────
+   Dark background with a burgundy top border to mirror the navbar. */
+
+footer {
+  background-color: #1C1A18;
+  border-top: 1px solid #7A1E2E;
+  color: #F5EFE4;
+}
+
+footer p:first-child {
+  color: #C4873A; /* amber for the restaurant name */
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+footer hr {
+  border-color: #7A1E2E;
+  opacity: 0.4;
+  width: 60%;
+  margin: 1rem auto;
+}
+
+footer .footer-sub {
+  color: #a09080;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+footer .footer-info {
+  color: #a09080;
+  font-size: 0.85rem;
+}
+
+footer .footer-copy {
+  color: #a09080;
+  font-size: 0.8rem;
+}
+
+
+/* ── GALLERY CAROUSEL ────────────────────────────────────────────────────────
+   object-fit: cover keeps images from stretching when they have different
+   original sizes. The max-height limits how tall the carousel gets. */
+
+#gallery .container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+#galleryCarousel {
+  border-radius: 10px;
+  overflow: hidden; /* hides the image corners outside the border-radius */
+}
+
+#galleryCarousel .carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* On screens 768px wide or smaller (tablets and phones),
+   reduce the carousel height so it doesn't take too much space */
+@media (max-width: 768px) {
+  #galleryCarousel .carousel-item img {
+    max-height: 300px;
+  }
+}
+
+
+/* ── BACK TO TOP BUTTON ──────────────────────────────────────────────────────
+   Fixed position means it stays in the corner while the user scrolls.
+   It starts hidden (display: none) and is shown by JavaScript after 300px of scroll. */
+
+#backToTop {
+  display: none; /* hidden by default, shown by JS on scroll */
+  position: fixed; /* stays in the same spot regardless of scrolling */
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999; /* makes sure it appears on top of other elements */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%; /* makes it a circle */
+  border: 2px solid #7A1E2E;
+  background: #1C1A18;
+  color: #C4873A;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#backToTop:hover {
+  background: #7A1E2E;
+  color: #F5EFE4;
+}

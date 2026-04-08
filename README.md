@@ -22,7 +22,7 @@ My goal is to help him bring that vision to life online, while putting into prac
 
 ## Design
 
-The design aims for something neutral and elegant — dark tones like charcoal and off-white with gold details that feel classy and a little ancient. Serif fonts for titles, clean sans-serif for body text, and moody, well-lit photography. The layout is simple and spacious, with card grids and dark sections as a visual foundation.
+The design aims for something neutral and elegant. Dark tones like charcoal and off-white with gold details that feel classy and a little ancient. Serif fonts for titles, clean sans-serif for body text, and moody, well-lit photography. The layout is simple and spacious, with card grids and dark sections as a visual foundation.
 
 ## Possible Domain Names
 
