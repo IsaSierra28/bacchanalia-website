@@ -11,7 +11,7 @@ function type() {
   if (i < text.length) {
     el.textContent += text[i]; // add one letter to the element
     i++;
-    setTimeout(type, 60); // wait 60ms, then call type() again
+    setTimeout(type, 80); // wait 80ms, then call type() again
   }
 }
 

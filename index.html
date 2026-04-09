@@ -23,8 +23,8 @@
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
 
-          <!-- Brand / logo link — scrolls back to hero when clicked -->
-          <a class="navbar-brand" href="#hero">Bacchanalia</a>
+         
+          <a class="navbar-brand">Bacchanalia</a>
 
           <!-- Hamburger button — only visible on small screens.
                data-bs-toggle and data-bs-target tell Bootstrap which element to show/hide -->
@@ -114,7 +114,11 @@
                 id="aboutToggleBtn"
               >See more</button>
 
+              <!-- collapse: Bootstrap hides this div by default. 
+               mt-3: margin top space of 3. 
+               aboutCollapse: our custom id, the button calls this div to show/hide it -->
               <div class="collapse mt-3" id="aboutCollapse">
+                <!-- border-start: vertical line on the left. border-secondary: gray color for that line. ps-3: padding left space of 3 so text doesn't stick to the line -->
                 <div class="border-start border-secondary ps-3">
                   <p>
                     The name comes from the ancient Roman festival dedicated to
